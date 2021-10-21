@@ -73,6 +73,11 @@
       .stats {
         @include flex-box;
         flex-direction: column;
+
+        h2 {
+          font-size: 14px;
+          color: $dark-gray;
+        }
       }
     }
   }
