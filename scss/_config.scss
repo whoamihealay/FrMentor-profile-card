@@ -1,0 +1,18 @@
+// Primay Colors
+$dark-cyan: hsl(185, 75%, 39%);
+$desat-blue: hsl(229, 23%, 23%);
+$gray-blue: hsl(227, 10%, 46%);
+// Neutral Colors
+$dark-gray: hsl(0, 0%, 59%);
+
+// Fonts
+$f-size: 18px;
+$f-family: "Kumbh Sans", sans-serif;
+$w400: 400;
+$w700: 700;
+
+@mixin flex-box {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}

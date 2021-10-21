@@ -1,114 +1,81 @@
-// Primay Colors
-$dark-cyan: hsl(185, 75%, 39%);
-$desat-blue: hsl(229, 23%, 23%);
-$gray-blue: hsl(227, 10%, 46%);
-// Neutral Colors
-$dark-gray: hsl(0, 0%, 59%);
+@import "general";
+@import "config";
 
-// Fonts
-$f-size: 18px;
-$f-family: "Kumbh Sans", sans-serif;
-$w400: 400;
-$w700: 700;
-
-* {
-  box-sizing: border-box;
-  margin: 0;
-  padding: 0;
-}
-
-body {
+.container {
   font-size: $f-size;
   font-family: $f-family;
   display: flex;
-  height: 720px;
+  height: 100vh;
   align-items: center;
   justify-content: center;
   background-image: url("../images/bg-pattern-top.svg"),
     url("../images/bg-pattern-bottom.svg");
   background-repeat: no-repeat;
-  background-position: -20rem -35rem, 35rem 35rem;
+  background-position-x: -10%, 110%;
+  background-position-y: -40vh, 35vh;
   background-color: $dark-cyan;
-}
 
-h1 {
-  font-size: 18px;
-  font-weight: 700;
-}
+  .card {
+    position: absolute;
+    width: 350px;
+    height: 350px;
+    background-color: white;
+    overflow: hidden;
+    border-radius: 15px;
+    background-image: url("../images/bg-pattern-card.svg");
+    background-position: top;
+    background-repeat: no-repeat;
 
-h2 {
-  font-size: 18px;
-  font-weight: 400;
-  color: var(--dark-gray);
-  padding-left: 5px;
-}
+    picture {
+      display: flex;
+      justify-content: center;
 
-h3 {
-  font-size: 18px;
-  font-weight: 400;
-  font-size: 14px;
-}
+      img {
+        margin-top: 92px;
+        border: 4px solid white;
+        border-radius: 100px;
+        width: 96px;
+        height: 96px;
+      }
+    }
 
-.card {
-  position: absolute;
-  width: 350px;
-  height: 400px;
-  background-color: white;
-  overflow: hidden;
-  border-radius: 15px;
-  background-image: url("../images/bg-pattern-card.svg");
-  background-position: top;
-  background-repeat: no-repeat;
-}
+    h3 {
+      color: $dark-gray;
+    }
 
-picture {
-  display: flex;
-  justify-content: center;
-}
+    .name-age-city {
+      @include flex-box;
+      flex-direction: column;
+      margin-top: 1rem;
 
-.victor {
-  margin-top: 92px;
-  border: 4px solid white;
-  border-radius: 100px;
-  width: 96px;
-  height: 96px;
-}
+      .name-age {
+        @include flex-box;
+      }
 
-@mixin flex-box {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
+      h2 {
+        color: $dark-gray;
+      }
+    }
+    .separator {
+      margin-top: 1rem;
+      border: 1px solid $dark-gray;
+      opacity: 25%;
+    }
 
-.name-age-city {
-  @include flex-box;
-  flex-direction: column;
-  margin-top: 1rem;
-}
+    .all-stats {
+      @include flex-box;
+      justify-content: space-around;
+      width: 325px;
+      margin-left: 12.5px;
+      margin-top: 1rem;
+      margin-bottom: 2rem;
 
-.name-age {
-  @include flex-box;
-  align-items: center;
-}
-
-.separator {
-  margin-top: 1rem;
-  border: 1px solid $dark-gray;
-  opacity: 25%;
-}
-
-.all-stats {
-  @include flex-box;
-  justify-content: space-around;
-  width: 325px;
-  margin-left: 12.5px;
-  margin-top: 1rem;
-  margin-bottom: 2rem;
-}
-
-.stats {
-  @include flex-box;
-  flex-direction: column;
+      .stats {
+        @include flex-box;
+        flex-direction: column;
+      }
+    }
+  }
 }
 
 @media screen and (max-width: 380px) {
