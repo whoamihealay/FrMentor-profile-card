@@ -79,15 +79,14 @@
 }
 
 @media screen and (max-width: 380px) {
-  body {
+  .container {
     height: 100vh;
-  }
 
-  .card {
-    width: 85%;
-  }
-
-  .all-stats {
-    width: 90%;
+    .card {
+      width: 85%;
+    }
+    .all-stats {
+      width: 90%;
+    }
   }
 }
