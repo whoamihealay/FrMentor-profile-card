@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en" role="FrontendMentor Challenge">
+<html lang="en">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -17,53 +17,43 @@
       href="https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@400;700&display=swap"
       rel="stylesheet"
     />
-
     <title>Frontend Mentor | Profile card component</title>
-    <style>
-      .attribution {
-        font-size: 11px;
-        text-align: center;
-      }
-      .attribution a {
-        color: hsl(228, 45%, 44%);
-      }
-    </style>
   </head>
-  <body class="container" role="body">
-    <div class="card" role="card">
-      <picture>
-        <img src="images/image-victor.jpg" alt="picture of Victor" />
-      </picture>
-      <div class="name-age-city" role="id">
-        <div class="name-age" role="id">
+  <body class="container">
+    <main>
+      <img
+        class="profile"
+        src="images/image-victor.jpg"
+        alt="Profile picture"
+      />
+      <section class="section-id">
+        <div>
           <h1>Victor Crest</h1>
-          <h2>26</h2>
+          <p class="age">26</p>
         </div>
-        <h3>London</h3>
-      </div>
-      <div class="separator" role="separator"></div>
-      <div class="all-stats" role="stats">
-        <div class="stats" role="stats">
-          <h1>80K</h1>
+        <p class="city">London</p>
+      </section>
+      <hr />
+      <section class="section-stats">
+        <div>
+          <p>80K</p>
           <h2>Followers</h2>
         </div>
-        <div class="stats" role="stats">
-          <h1>803K</h1>
+        <div>
+          <p>803K</p>
           <h2>Likes</h2>
         </div>
-        <div class="stats" role="stats">
-          <h1>1.4K</h1>
+        <div>
+          <p>1.4K</p>
           <h2>Photos</h2>
         </div>
-      </div>
-    </div>
-  </body>
-  <footer>
-    <div class="attribution" role="attribution">
+      </section>
+    </main>
+    <footer class="attribution">
       Challenge by
       <a href="https://www.frontendmentor.io?ref=challenge" target="_blank"
         >Frontend Mentor</a
       >. Coded by <a href="#">Andrew</a>.
-    </div>
-  </footer>
+    </footer>
+  </body>
 </html>

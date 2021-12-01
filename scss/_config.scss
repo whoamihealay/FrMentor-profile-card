@@ -1,17 +1,27 @@
-// Primay Colors
-$dark-cyan: hsl(185, 75%, 39%);
-$desat-blue: hsl(229, 23%, 23%);
-$gray-blue: hsl(227, 10%, 46%);
-// Neutral Colors
-$dark-gray: hsl(0, 0%, 59%);
+// Primary
+$clr-dark-cyan: hsl(185, 75%, 39%);
+$clr-desat-blue: hsl(229, 23%, 23%);
+$clr-gray-blue: hsl(227, 10%, 46%);
+// Neutral
+$clr-dark-gray: hsl(0, 0%, 59%);
+$clr-black: hsl(0, 0%, 0%);
+$clr-white: hsl(0, 0%, 100%);
 
-// Fonts
-$f-size: 18px;
-$f-family: "Kumbh Sans", sans-serif;
-$w400: 400;
-$w700: 700;
+// Typography
+$ff-sans-normal: "Kumbh Sans", sans-serif;
+$fs-900: 3rem;
+$fs-800: 2.25rem;
+$fs-700: 1.75rem;
+$fs-600: 1.5rem;
+$fs-500: 1.225rem;
+$fs-400: 1.125rem;
+$fs-300: 1rem;
+$fs-200: 0.875rem;
+//  utilities
+$border-rad: 1rem;
+$line-height: 1.5;
 
-@mixin flex-box {
+@mixin flex-center {
   display: flex;
   align-items: center;
   justify-content: center;

@@ -1,97 +1,81 @@
-@import "general";
 @import "config";
+@import "general";
 
 .container {
-  font-size: $f-size;
-  font-family: $f-family;
-  display: flex;
-  height: 100vh;
-  align-items: center;
-  justify-content: center;
+  @include flex-center;
+  flex-direction: column;
   background-image: url("../images/bg-pattern-top.svg"),
     url("../images/bg-pattern-bottom.svg");
   background-repeat: no-repeat;
+  background-color: $clr-dark-cyan;
   background-position-x: -10%, 110%;
-  background-position-y: -40vh, 35vh;
-  background-color: $dark-cyan;
+  background-position-y: -35vh, 35vh;
 
-  .card {
-    position: absolute;
-    width: 350px;
-    height: 350px;
+  main {
+    width: 95%;
+    max-width: 25rem;
+    min-width: 18.75rem;
     background-color: white;
-    overflow: hidden;
-    border-radius: 15px;
+    border-radius: 1rem;
     background-image: url("../images/bg-pattern-card.svg");
     background-position: top;
-    background-repeat: no-repeat;
+    background-repeat: repeat-x;
+    text-align: center;
+    position: relative;
 
-    picture {
-      display: flex;
-      justify-content: center;
-
-      img {
-        margin-top: 92px;
-        border: 4px solid white;
-        border-radius: 100px;
-        width: 96px;
-        height: 96px;
-      }
-    }
-
-    h3 {
-      color: $dark-gray;
-    }
-
-    .name-age-city {
-      @include flex-box;
-      flex-direction: column;
-      margin-top: 1rem;
-
-      .name-age {
-        @include flex-box;
-      }
-
-      h2 {
-        color: $dark-gray;
-      }
-    }
-    .separator {
-      margin-top: 1rem;
-      border: 1px solid $dark-gray;
-      opacity: 25%;
-    }
-
-    .all-stats {
-      @include flex-box;
-      justify-content: space-around;
-      width: 325px;
-      margin-left: 12.5px;
-      margin-top: 1rem;
-      margin-bottom: 2rem;
-
-      .stats {
-        @include flex-box;
-        flex-direction: column;
-
-        h2 {
-          font-size: 14px;
-          color: $dark-gray;
-        }
-      }
+    img {
+      margin-top: 92px;
+      margin-inline: auto;
+      border: 4px solid white;
+      border-radius: 50%;
+      width: 96px;
+      height: 96px;
     }
   }
 }
 
-@media screen and (max-width: 380px) {
-  .container {
-    height: 100vh;
+.section-id {
+  @include flex-center;
+  flex-direction: column;
+  margin: 1em 0;
 
-    .card {
-      width: 85%;
+  div {
+    @include flex-center;
+    gap: 0.5em;
+
+    h1 {
+      font-weight: 700;
     }
-    .all-stats {
-      width: 90%;
+
+    .age {
+      opacity: 0.5;
+    }
+  }
+  .city {
+    font-size: $fs-300;
+    opacity: 0.5;
+  }
+}
+
+hr {
+  opacity: 0.1;
+}
+
+.section-stats {
+  @include flex-center;
+  justify-content: space-around;
+  margin: 1em 2em;
+  div {
+    @include flex-center;
+    flex-direction: column;
+
+    p {
+      font-weight: 700;
+    }
+
+    h2 {
+      font-size: $fs-200;
+      opacity: 0.5;
     }
   }
 }
